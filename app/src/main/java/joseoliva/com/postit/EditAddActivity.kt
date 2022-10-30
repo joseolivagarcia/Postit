@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import joseoliva.com.postit.bbdd.PostIt
@@ -24,6 +25,11 @@ class EditAddActivity : AppCompatActivity() {
     lateinit var color: String //le doy este valor pero luego uso el que reciba
     //creo una var para el viewmodel y una entera para el id
     lateinit var viewmodel: PostItViewModel
+    //creo variables para los radiobuttons
+    lateinit var rbverde: RadioButton
+    lateinit var rbazul: RadioButton
+    lateinit var rbnaranja: RadioButton
+    lateinit var rbamarillo: RadioButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +42,11 @@ class EditAddActivity : AppCompatActivity() {
         positTitleET = binding.ETpositName
         positET = binding.ETpositDescription
         saveBtn = binding.idBtn
+        //referencio los radiobuttons
+        rbverde = binding.radioverde
+        rbazul = binding.radioazul
+        rbnaranja = binding.radionaranja
+        rbamarillo = binding.radioamarillo
 
         /*
         obtengo los datos que recibo por el intent, primero compruebo si recibo el dato que me dice
@@ -48,7 +59,19 @@ class EditAddActivity : AppCompatActivity() {
         if(tipopostit.equals("Editar")){
             val titulo = intent.getStringExtra("titulo")
             val posit = intent.getStringExtra("posit")
-
+            color = intent.getStringExtra("color").toString()
+            if (color.equals("verde")){
+                rbverde.isChecked = true
+            }
+            if (color.equals("azul")){
+                rbazul.isChecked = true
+            }
+            if (color.equals("naranja")){
+                rbnaranja.isChecked = true
+            }
+            if (color.equals("amarillo")){
+                rbamarillo.isChecked = true
+            }
             positTitleET.setText(titulo)
             positET.setText(posit)
             saveBtn.text = "Actualizar PostIt"
@@ -71,20 +94,38 @@ class EditAddActivity : AppCompatActivity() {
                 if(titulo.isNotEmpty() && posit.isNotEmpty()){
                     val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
                     val currentdatetime: String = sdf.format(Date())
+                    if (rbverde.isChecked){
+                        color = "verde"
+                    }
+                    if (rbazul.isChecked){
+                        color = "azul"
+                    }
+                    if (rbnaranja.isChecked){
+                        color = "naranja"
+                    }
+                    if (rbamarillo.isChecked){
+                        color = "amarillo"
+                    }
                     val updateposit = PostIt(titulo,posit,currentdatetime,color)
                     updateposit.id = id
                     viewmodel.updatePostit(updateposit)
                 }
             }else{
-                /*
-                val newpos = PostIt("Hola","prueba de la app manual","hoy","verde")
-                viewmodel.addPosit(newpos)
-
-                 */
-
                 if(titulo.isNotEmpty() && posit.isNotEmpty()){
                     val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
                     val currentdatetime: String = sdf.format(Date())
+                    if (rbverde.isChecked){
+                        color = "verde"
+                    }
+                    if (rbazul.isChecked){
+                        color = "azul"
+                    }
+                    if (rbnaranja.isChecked){
+                        color = "naranja"
+                    }
+                    if (rbamarillo.isChecked){
+                        color = "amarillo"
+                    }
                     val newposit = PostIt(titulo,posit,currentdatetime,color)
                     viewmodel.addPosit(newposit)
                 }

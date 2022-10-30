@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditAddActivity">
+    tools:context=".EditAddActivity"
+    android:background="@color/fondo">
 
     <EditText
         android:id="@+id/ETpositName"
@@ -13,14 +14,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Título de la nota"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"/>
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
 
     <EditText
         android:id="@+id/ETpositDescription"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/idBtn"
+        android:layout_height="500dp"
         android:layout_below="@+id/ETpositName"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -29,8 +31,43 @@
         android:gravity="start|top"
         android:hint="Escribe los detalles de la nota"
         android:maxLines="10"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ETpositDescription"
+        android:layout_above="@id/idBtn"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/radioverde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verde"
+            android:textColor="@color/verde"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/radioazul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Azul"
+            android:textColor="@color/azul" />
+        <RadioButton
+            android:id="@+id/radioamarillo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amarillo"
+            android:textColor="@color/amarillo" />
+        <RadioButton
+            android:id="@+id/radionaranja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Naranja"
+            android:textColor="@color/naranja" />
+    </RadioGroup>
     <Button
         android:id="@+id/idBtn"
         android:layout_width="match_parent"
@@ -39,6 +76,7 @@
         android:layout_margin="20dp"
         android:text="Button"
         android:textAllCaps="false"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:backgroundTint="@color/naranja"/>
 
 </RelativeLayout>

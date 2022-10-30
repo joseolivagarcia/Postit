@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    android:id="@+id/cardview"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,6 +9,7 @@
     app:cardCornerRadius="5dp"
     app:cardElevation="3dp">
     <RelativeLayout
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp">
@@ -36,7 +38,7 @@
             android:layout_toLeftOf="@+id/IVDelete"
             android:padding="4dp"
             android:text="fecha"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="13sp" />
         <ImageView
             android:id="@+id/IVDelete"

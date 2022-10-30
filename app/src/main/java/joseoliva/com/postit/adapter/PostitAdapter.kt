@@ -1,5 +1,6 @@
 package joseoliva.com.postit.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ class PostitAdapter(
 
     //creo una var de lista donde guardare todos los postit
     private val allPostit = ArrayList<PostIt>()
+    lateinit var color: String
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostitViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -21,7 +23,20 @@ class PostitAdapter(
 
     override fun onBindViewHolder(holder: PostitViewHolder, position: Int) {
         val item = allPostit[position]
-        holder.render(item,onClickListener,onClickDelete)
+        if(item.color.equals("verde")){
+            color = "#8BC34A"
+        }
+        if(item.color.equals("azul")){
+            color = "#00BCD4"
+        }
+        if(item.color.equals("naranja")){
+            color = "#FF9800"
+        }
+        if(item.color.equals("amarillo")){
+            color = "#FFEB3B"
+        }
+        holder.render(item,onClickListener,onClickDelete,color)
+
     }
 
     override fun getItemCount(): Int {

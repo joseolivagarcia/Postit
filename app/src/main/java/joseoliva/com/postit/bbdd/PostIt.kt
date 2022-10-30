@@ -13,7 +13,7 @@ data class PostIt(
     @ColumnInfo(name = "fecha")
     val fecha: String,
     @ColumnInfo(name = "color")
-    val color: String
+    var color: String
 )
 {
     @PrimaryKey(autoGenerate = true)
