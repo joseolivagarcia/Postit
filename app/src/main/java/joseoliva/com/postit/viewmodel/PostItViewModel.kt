@@ -39,7 +39,7 @@ class PostItViewModel(application: Application): AndroidViewModel(application) {
      hay en el repositorio.
      Lo hago con viewModelScope para no hacerlo en el hilo ppal y no bloquear la app
      */
-    fun insertPosit (postIt: PostIt) = viewModelScope.launch(Dispatchers.IO) {
+    fun addPosit (postIt: PostIt) = viewModelScope.launch(Dispatchers.IO) {
         repositorio.insertpostit(postIt)
     }
     fun deletePostit(postIt: PostIt) = viewModelScope.launch(Dispatchers.IO) {

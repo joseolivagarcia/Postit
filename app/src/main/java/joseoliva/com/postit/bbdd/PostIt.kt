@@ -6,8 +6,6 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "tablaposits")
 data class PostIt(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
     @ColumnInfo(name = "titulo")
     val titulo: String,
     @ColumnInfo(name = "nota")
@@ -17,3 +15,7 @@ data class PostIt(
     @ColumnInfo(name = "color")
     val color: String
 )
+{
+    @PrimaryKey(autoGenerate = true)
+    var id = 0
+}

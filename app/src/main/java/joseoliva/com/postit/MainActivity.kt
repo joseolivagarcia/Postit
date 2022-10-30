@@ -1,5 +1,6 @@
 package joseoliva.com.postit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -52,17 +53,29 @@ class MainActivity : AppCompatActivity() {
         })
 
         btnadd.setOnClickListener {
-            //meto manualmente alguna nota para probar
-            val posit1 = PostIt(0,"Festivos","tengo 2 festivos","hoy","naranja")
-            viewModel.insertPosit(posit1)
-            val posit2 = PostIt(0,"Partido","Sabado a las 12","mañana","rojo")
-            viewModel.insertPosit(posit2)
+            //si pulso el boton add "+" voy a la actividad de crear un postit
+            val intent = Intent(this,EditAddActivity::class.java)
+            startActivity(intent)
+            this.finish()
         }
 
     }
 
     private fun onItemSelected(postIt: PostIt){
-        Toast.makeText(this, postIt.titulo, Toast.LENGTH_SHORT).show()
+        /*
+        Si pulso sobre un postit, voy a la actividad de editar/crear posit
+        En este caso al pulsar sobre uno existente se entiende que lo vamos a editar
+        asi que le paso los datos que tiene para mostrarlos en la otra activity
+         */
+        val intent = Intent(this,EditAddActivity::class.java)
+        intent.putExtra("tipoposit", "Editar")
+        intent.putExtra("id", postIt.id)
+        intent.putExtra("titulo", postIt.titulo)
+        intent.putExtra("posit", postIt.nota)
+        intent.putExtra("fecha", postIt.fecha)
+        intent.putExtra("color", postIt.color)
+        startActivity(intent)
+
     }
 
     private fun onDeleteItem(postIt: PostIt){
