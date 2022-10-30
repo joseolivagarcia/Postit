@@ -13,32 +13,33 @@
         android:layout_margin="4dp">
 
         <TextView
-            android:id="@+id/idTVpostit"
+            android:id="@+id/TVpostit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
-            android:layout_toLeftOf="@+id/idIVDelete"
+            android:layout_toLeftOf="@+id/IVDelete"
             android:padding="4dp"
             android:text="Note"
             android:textColor="@color/black"
             android:textSize="18sp" />
+
         <TextView
-            android:id="@+id/idTVDate"
+            android:id="@+id/TVDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idTVpostit"
+            android:layout_below="@+id/TVpostit"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
-            android:layout_toLeftOf="@+id/idIVDelete"
+            android:layout_toLeftOf="@+id/IVDelete"
             android:padding="4dp"
             android:text="fecha"
             android:textColor="@color/black"
-            android:textSize="13sp"/>
+            android:textSize="13sp" />
         <ImageView
-            android:id="@+id/idIVDelete"
+            android:id="@+id/IVDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

@@ -13,5 +13,7 @@ data class PostIt(
     @ColumnInfo(name = "nota")
     val nota: String,
     @ColumnInfo(name = "fecha")
-    val fecha: String
+    val fecha: String,
+    @ColumnInfo(name = "color")
+    val color: String
 )
