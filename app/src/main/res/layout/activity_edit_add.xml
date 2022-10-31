@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Título de la nota"
+        android:hint="@string/titulonota"
         android:singleLine="true"
         android:maxLines="1"
         android:textColor="@color/white"
@@ -29,7 +29,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="start|top"
-        android:hint="Escribe los detalles de la nota"
+        android:hint="@string/detallesnota"
         android:maxLines="10"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
@@ -45,7 +45,7 @@
             android:id="@+id/radioverde"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Verde"
+            android:text="@string/verde"
             android:textColor="@color/verde"
             android:checked="true"
             />
@@ -53,19 +53,19 @@
             android:id="@+id/radioazul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Azul"
+            android:text="@string/azul"
             android:textColor="@color/azul" />
         <RadioButton
             android:id="@+id/radioamarillo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amarillo"
+            android:text="@string/amarillo"
             android:textColor="@color/amarillo" />
         <RadioButton
             android:id="@+id/radionaranja"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Naranja"
+            android:text="@string/naranja"
             android:textColor="@color/naranja" />
     </RadioGroup>
     <Button

@@ -12,13 +12,14 @@
         android:id="@+id/buscador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Buscar post it"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/buscador"
+        android:fontFamily="@font/tiza"
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"/>
+        android:textColorHint="@color/white" />
 
     <!--fab para añadir una nota-->
     <androidx.recyclerview.widget.RecyclerView

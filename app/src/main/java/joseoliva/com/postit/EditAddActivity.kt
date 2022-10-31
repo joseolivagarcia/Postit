@@ -1,6 +1,7 @@
 package joseoliva.com.postit
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +9,7 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import io.github.muddz.styleabletoast.StyleableToast
 import joseoliva.com.postit.bbdd.PostIt
 import joseoliva.com.postit.databinding.ActivityEditAddBinding
 import joseoliva.com.postit.viewmodel.PostItViewModel
@@ -109,6 +111,18 @@ class EditAddActivity : AppCompatActivity() {
                     val updateposit = PostIt(titulo,posit,currentdatetime,color)
                     updateposit.id = id
                     viewmodel.updatePostit(updateposit)
+                }else{
+                    //implementando la dependencia StyleableToast creamos Toast personalizados
+                    StyleableToast
+                        .Builder(this)
+                        .text("Debes rellenar ambos campos")
+                        .textColor(Color.WHITE)
+                        .backgroundColor(Color.parseColor("#04332B"))
+                        .stroke(3,Color.parseColor("#FF9800"))
+                        .iconStart(R.drawable.pin)
+                        .iconEnd(R.drawable.pin)
+                        .show()
+                    return@setOnClickListener
                 }
             }else{
                 if(titulo.isNotEmpty() && posit.isNotEmpty()){
@@ -128,6 +142,19 @@ class EditAddActivity : AppCompatActivity() {
                     }
                     val newposit = PostIt(titulo,posit,currentdatetime,color)
                     viewmodel.addPosit(newposit)
+                }else{
+                    //implementando la dependencia StyleableToast creamos Toast personalizados
+                    StyleableToast
+                        .Builder(this)
+                        .text("Debes rellenar ambos campos")
+                        .textColor(Color.WHITE)
+                        .backgroundColor(Color.parseColor("#04332B"))
+                        .stroke(3,Color.parseColor("#FF9800"))
+                        .iconStart(R.drawable.pin)
+                        .iconEnd(R.drawable.pin)
+                        .show()
+
+                    return@setOnClickListener
                 }
             }
             startActivity(Intent(applicationContext, MainActivity::class.java))

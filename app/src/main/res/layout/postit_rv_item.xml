@@ -40,17 +40,28 @@
             android:text="fecha"
             android:textColor="@color/white"
             android:textSize="13sp" />
+
         <ImageView
             android:id="@+id/IVDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="3dp"
-            android:padding="3dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="5dp"
             android:src="@drawable/ic_delete"
             app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/IVpin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/pin" />
+
 
     </RelativeLayout>
 

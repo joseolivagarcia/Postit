@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Pizarra de Notas</string>
+    <string name="app_name">Memo Board</string>
+    <string name="buscador">Find a memo</string>
+    <string name="titulonota">Memo Title</string>
+    <string name="detallesnota">Memo Details</string>
+    <string name="verde">Green</string>
+    <string name="azul">Blue</string>
+    <string name="amarillo">Yellow</string>
+    <string name="naranja">Orange</string>
 </resources>

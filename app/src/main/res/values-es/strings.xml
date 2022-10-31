@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pizarra de notas</string>
+    <string name="buscador">Buscar una nota</string>
+    <string name="titulonota">Título</string>
+    <string name="detallesnota">Detalles</string>
+    <string name="verde">Verde</string>
+    <string name="azul">Azul</string>
+    <string name="amarillo">Amarillo</string>
+    <string name="naranja">Naranja</string>
+</resources>
