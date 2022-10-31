@@ -28,10 +28,10 @@ class PostitViewHolder(view: View): RecyclerView.ViewHolder(view) {
         fecha.text = "Actualizado: " + positmodel.fecha
         //cambio la fuente para unos colores u otros y el color del texto
         if(color.equals("#8BC34A") || color.equals("#00BCD4")){ //para color verde o azul
-            titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.dancing_normal)
+            titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.hand_normal)
             titulo.setTextColor(Color.parseColor("#FFFFFFFF"))
         }else{
-            titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.hand_normal)
+            titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.dancing_normal)
             titulo.setTextColor(Color.parseColor("#FF000000"))
         }
         positfondo.setBackgroundColor(Color.parseColor(color))

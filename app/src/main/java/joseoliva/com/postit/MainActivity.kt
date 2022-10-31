@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -36,6 +38,14 @@ class MainActivity : AppCompatActivity() {
         val postitRVAdapter = PostitAdapter(onClickListener = {postIt -> onItemSelected(postIt) }, onClickDelete = {posit -> onDeleteItem(posit)})
         //ponemos el adapter que acabamos de referenciar al recyclerview
         recyclerView.adapter = postitRVAdapter
+
+        //para usar el buscador
+        binding.buscador.addTextChangedListener {
+            val listafiltrada = viewModel.listapostit.value!!.filter{
+                    postIt -> postIt.titulo.lowercase().contains(it.toString().lowercase())
+            }
+            postitRVAdapter.listaNotasFiltradas(listafiltrada)
+        }
 
 
         //inicializamos el viewmodel con un provider y le pasamos nuestra clase de PostitViewModel

@@ -13,7 +13,7 @@ class PostitAdapter(
 ): RecyclerView.Adapter<PostitViewHolder>() {
 
     //creo una var de lista donde guardare todos los postit
-    private val allPostit = ArrayList<PostIt>()
+    private var allPostit = ArrayList<PostIt>()
     lateinit var color: String
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostitViewHolder {
@@ -46,6 +46,11 @@ class PostitAdapter(
     fun updateList(newList: List<PostIt>){
         allPostit.clear()
         allPostit.addAll(newList)
+        notifyDataSetChanged()
+    }
+
+    fun listaNotasFiltradas(listafiltrada: List<PostIt>){
+        this.allPostit = listafiltrada as ArrayList<PostIt>
         notifyDataSetChanged()
     }
 
