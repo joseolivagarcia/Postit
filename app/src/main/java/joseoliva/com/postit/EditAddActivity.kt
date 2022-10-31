@@ -76,10 +76,12 @@ class EditAddActivity : AppCompatActivity() {
             }
             positTitleET.setText(titulo)
             positET.setText(posit)
-            saveBtn.text = "Actualizar PostIt"
+
+            saveBtn.text = getString(R.string.btneditar)
 
         }else{
-            saveBtn.text = "Guardar PostIt"
+
+            saveBtn.text = getString(R.string.btnguardar)
         }
 
         /*

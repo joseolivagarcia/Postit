@@ -7,4 +7,6 @@
     <string name="azul">Azul</string>
     <string name="amarillo">Amarillo</string>
     <string name="naranja">Naranja</string>
+    <string name="btnguardar">Guardar Nota</string>
+    <string name="btneditar">Editar Nota</string>
 </resources>

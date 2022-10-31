@@ -91,4 +91,9 @@ class MainActivity : AppCompatActivity() {
     private fun onDeleteItem(postIt: PostIt){
         viewModel.deletePostit(postIt)
     }
+
+    @Override
+    override fun onBackPressed() {
+
+    }
 }

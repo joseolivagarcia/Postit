@@ -7,4 +7,6 @@
     <string name="azul">Blue</string>
     <string name="amarillo">Yellow</string>
     <string name="naranja">Orange</string>
+    <string name="btnguardar">Save Memo</string>
+    <string name="btneditar">Edit Memo</string>
 </resources>
