@@ -11,7 +11,7 @@
         android:top="260dp"
         android:bottom="260dp"
         android:gravity="center">
-        <bitmap android:src="@drawable/icoapp"/>
+        <bitmap android:src="@drawable/splash"/>
     </item>
 
 </layer-list>

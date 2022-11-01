@@ -1,9 +1,11 @@
 package joseoliva.com.postit
 
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -32,8 +34,13 @@ class MainActivity : AppCompatActivity() {
         recyclerView = binding.rvpostit
         btnadd = binding.fab
 
-        //creamos el manager del recyclerview
-        recyclerView.layoutManager = GridLayoutManager(this,2) //si usamos LinearLayoutManager saldran en fila de 1
+        //creamos el manager del recyclerview y le asigno uno u otro para orientacion vertical u horizontal
+        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT){
+            recyclerView.layoutManager = GridLayoutManager(this,2) //si usamos LinearLayoutManager saldran en fila de 1
+        }else{
+            recyclerView.layoutManager = GridLayoutManager(this,4) //si usamos LinearLayoutManager saldran en fila de 1
+        }
+
         //inicializamos el adapter y le pasamos como parametros el contexto y las interface que necesita
         val postitRVAdapter = PostitAdapter(onClickListener = {postIt -> onItemSelected(postIt) }, onClickDelete = {posit -> onDeleteItem(posit)})
         //ponemos el adapter que acabamos de referenciar al recyclerview
@@ -89,7 +96,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onDeleteItem(postIt: PostIt){
-        viewModel.deletePostit(postIt)
+        val dialog = AlertDialog.Builder(this)
+            .setMessage(getString(R.string.dialogmensaje))
+            .setNegativeButton(getString(R.string.dialogno)){
+                    view, _ -> view.dismiss()
+            }
+            .setPositiveButton(getString(R.string.dialogsi)){
+                view,_ -> view.dismiss()
+                viewModel.deletePostit(postIt)
+            }
+            .setCancelable(false)
+            .create()
+
+        dialog.show()
+
     }
 
     @Override

@@ -9,4 +9,7 @@
     <string name="naranja">Naranja</string>
     <string name="btnguardar">Guardar Nota</string>
     <string name="btneditar">Editar Nota</string>
+    <string name="dialogsi">SI</string>
+    <string name="dialogno">NO</string>
+    <string name="dialogmensaje">¿Quieres eliminar ésta nota?</string>
 </resources>

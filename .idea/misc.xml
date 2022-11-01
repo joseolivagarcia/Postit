@@ -5,9 +5,12 @@
       <map>
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.2805" />
         <entry key="app/src/main/res/font/font.xml" value="0.44583333333333336" />
+        <entry key="app/src/main/res/layout-land/activity_edit_add.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_edit_add.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/postit_rv_item.xml" value="0.45168067226890757" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.151" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2295" />
       </map>
     </option>
   </component>

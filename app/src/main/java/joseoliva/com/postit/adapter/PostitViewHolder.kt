@@ -31,7 +31,7 @@ class PostitViewHolder(view: View): RecyclerView.ViewHolder(view) {
             titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.hand_normal)
             titulo.setTextColor(Color.parseColor("#FFFFFFFF"))
         }else{
-            titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.dancing_normal)
+            titulo.typeface = ResourcesCompat.getFont(titulo.context,R.font.hand_normal)
             titulo.setTextColor(Color.parseColor("#FF000000"))
         }
         positfondo.setBackgroundColor(Color.parseColor(color))

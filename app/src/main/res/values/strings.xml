@@ -9,4 +9,7 @@
     <string name="naranja">Orange</string>
     <string name="btnguardar">Save Memo</string>
     <string name="btneditar">Edit Memo</string>
+    <string name="dialogsi">YES</string>
+    <string name="dialogno">NO</string>
+    <string name="dialogmensaje">Do you want delete memo?</string>
 </resources>

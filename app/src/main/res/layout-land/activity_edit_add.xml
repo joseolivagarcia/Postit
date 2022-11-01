@@ -16,8 +16,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="@string/titulonota"
         android:fontFamily="@font/tiza"
+        android:hint="@string/titulonota"
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="@color/white"
@@ -26,55 +26,59 @@
     <EditText
         android:id="@+id/ETpositDescription"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/ETpositName"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/hand_normal"
         android:gravity="start|top"
         android:hint="@string/detallesnota"
-        android:fontFamily="@font/hand_normal"
         android:maxLines="10"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
+
     <RadioGroup
         android:id="@+id/radiogroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/ETpositDescription"
         android:layout_above="@id/idBtn"
-        android:gravity="center">
+        android:layout_below="@id/ETpositDescription"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/radioverde"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/verde"
-            android:fontFamily="@font/tiza"
-            android:textColor="@color/verde"
             android:checked="true"
-            />
+            android:fontFamily="@font/tiza"
+            android:text="@string/verde"
+            android:textColor="@color/verde" />
+
         <RadioButton
             android:id="@+id/radioazul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/azul"
             android:fontFamily="@font/tiza"
+            android:text="@string/azul"
             android:textColor="@color/azul" />
+
         <RadioButton
             android:id="@+id/radioamarillo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/amarillo"
             android:fontFamily="@font/tiza"
+            android:text="@string/amarillo"
             android:textColor="@color/amarillo" />
+
         <RadioButton
             android:id="@+id/radionaranja"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/naranja"
             android:fontFamily="@font/tiza"
+            android:text="@string/naranja"
             android:textColor="@color/naranja" />
     </RadioGroup>
 
