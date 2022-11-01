@@ -12,4 +12,5 @@
     <string name="dialogsi">YES</string>
     <string name="dialogno">NO</string>
     <string name="dialogmensaje">Do you want delete memo?</string>
+    <string name="actualizadofecha">Last Update: </string>
 </resources>

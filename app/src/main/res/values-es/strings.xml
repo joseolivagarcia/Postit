@@ -12,4 +12,5 @@
     <string name="dialogsi">SI</string>
     <string name="dialogno">NO</string>
     <string name="dialogmensaje">¿Quieres eliminar ésta nota?</string>
+    <string name="actualizadofecha">Actualizado: </string>
 </resources>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditAddActivity"
-    android:background="@color/fondo">
+    android:background="@color/fondo"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/ETpositName"
@@ -21,30 +22,32 @@
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/ETpositDescription"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_below="@+id/ETpositName"
+        android:layout_height="200dp"
+        android:fontFamily="@font/hand_normal"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:gravity="start|top"
         android:hint="@string/detallesnota"
-        android:fontFamily="@font/hand_normal"
         android:maxLines="10"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/radiogroup"
+        app:layout_constraintTop_toBottomOf="@id/ETpositName"
+        app:layout_constraintVertical_bias="0.09" />
+
     <RadioGroup
         android:id="@+id/radiogroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/ETpositDescription"
-        android:layout_above="@id/idBtn"
+        app:layout_constraintBottom_toTopOf="@id/idBtn"
+        android:layout_marginBottom="20dp"
         android:gravity="center">
         <RadioButton
             android:id="@+id/radioverde"
@@ -82,15 +85,14 @@
         android:id="@+id/idBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/naranja"
         android:text="@string/btnguardar"
         android:fontFamily="@font/tiza"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
